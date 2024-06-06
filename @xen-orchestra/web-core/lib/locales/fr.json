@@ -10,6 +10,12 @@
     "master": "Hôte primaire",
     "open": "Ouvrir",
     "quick-actions": "Actions rapides",
+    "search": "Rechercher",
+    "search-bar": {
+      "label": "Moteur de recherche",
+      "placeholder": "Écrivez votre requête...",
+      "use-query-builder": "Utiliser le constructeur de requête"
+    },
     "sidebar": {
       "close": "Fermer la barre latérale",
       "lock": "Verrouiller la barre latérale",

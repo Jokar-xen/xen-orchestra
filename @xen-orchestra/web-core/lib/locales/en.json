@@ -10,6 +10,12 @@
     "master": "Primary host",
     "open": "Open",
     "quick-actions": "Quick actions",
+    "search": "Search",
+    "search-bar": {
+      "label": "Search Engine",
+      "placeholder": "Write your query...",
+      "use-query-builder": "Use query builder"
+    },
     "sidebar": {
       "close": "Close sidebar",
       "lock": "Lock sidebar open",
