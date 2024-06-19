@@ -17,6 +17,7 @@
 - [V2V] Fix VSAN import not used when importing from VSAN ([PR #7717](https://github.com/vatesfr/xen-orchestra/pull/7717))
 - [Tasks] Log pending and failed API calls as XO tasks, eventually they will replaced logs in Settings/Logs
 - [Pool] Fix `Text data outside of root node` when installing patches
+- [SDN-Controller] Fix `tlsv1 alert unknown ca` when creating private network (PR [#7755](https://github.com/vatesfr/xen-orchestra/pull/7755))
 
 ### Packages to release
 
@@ -44,6 +45,7 @@
 - xo-server minor
 - xo-server-backup-reports major
 - xo-server-netbox minor
+- xo-server-sdn-controller patch
 - xo-server-transport-email minor
 - xo-web patch
 
