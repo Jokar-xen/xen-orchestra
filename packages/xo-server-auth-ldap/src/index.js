@@ -402,13 +402,23 @@ class AuthLdap {
         const xoGroupMembers = xoGroup.users === undefined ? [] : xoGroup.users.slice(0)
 
         for (const memberId of ldapGroupMembers) {
+          let searchResult
+          if (membersMapping.userAttribute.trim().toLowerCase() === 'dn') {
+            searchResult = await client.search(memberId, {
+              scope: 'base',
+            })
+          } else {
+            searchResult = await client.search(this._searchBase, {
+              scope: 'sub',
+              filter: `(${escape(membersMapping.userAttribute)}=${escape(memberId)})`,
+              sizeLimit: 1,
+            })
+          }
+
           const {
             searchEntries: [ldapUser],
-          } = await client.search(this._searchBase, {
-            scope: 'sub',
-            filter: `(${escape(membersMapping.userAttribute)}=${escape(memberId)})`,
-            sizeLimit: 1,
-          })
+          } = searchResult
+
           if (ldapUser === undefined) {
             logger.error(
               `LDAP user ${memberId} belongs to group ${groupLdapName} but could not be found by searching ${membersMapping.userAttribute}=${memberId} in ${this._searchBase}`
