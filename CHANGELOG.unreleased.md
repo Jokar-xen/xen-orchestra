@@ -9,7 +9,7 @@
 
 - [Netbox] Check Netbox version before attempting to synchronize (PR [#7735](https://github.com/vatesfr/xen-orchestra/pull/7735))
 - [Netbox] Support Netbox 4 (Thanks [@ChrisMcNichol](https://github.com/ChrisMcNichol)!) (PR [#7735](https://github.com/vatesfr/xen-orchestra/pull/7735))
-- [XOSTOR] Possibility to directly access an XOSTOR storage from the view that lists all XOSTOR storages.
+- [XOSTOR] Possibility to directly access an XOSTOR storage from the view that lists all XOSTOR storages. (PR [#7764](https://github.com/vatesfr/xen-orchestra/pull/7764))
 
 ### Bug fixes
 
